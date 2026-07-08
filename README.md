@@ -1,45 +1,36 @@
-# Agentic RAG Assistant
+# Sales Forecasting
 
-**Agentic customer support assistant** built with LangChain, pgvector, and Groq.
+**Time series sales forecasting model**, built and evaluated in a Jupyter notebook.
 
 ## Overview
 
-This project implements a Retrieval-Augmented Generation (RAG) customer support assistant that answers user questions by retrieving relevant knowledge base entries and generating grounded responses, orchestrated as an agent rather than a single-shot RAG chain.
-
-## Knowledge Base
-
-Built on the Bitext Customer Support LLM Chatbot Training Dataset: 26,872 customer support Q&A pairs spanning 27 intent categories.
+This project forecasts future sales from historical time series data. The full workflow, from data preparation through modeling and evaluation, is contained in a single notebook.
 
 ## Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Orchestration | LangChain |
-| Vector store | PostgreSQL with pgvector |
-| LLM inference | Groq |
+| Environment | Jupyter Notebook, Python |
+
+> Specific forecasting method (e.g. ARIMA, Prophet, LSTM, regression-based), dataset source, and evaluation metrics (MAE, RMSE, MAPE) are not documented here yet; add these details from the notebook before publishing.
 
 ## Project Structure
 
 ```
-src/
-app.py
+sales-forecasting.ipynb
 requirements.txt
 ```
-
-> Confirm this matches the current repo layout, and add details on the retrieval strategy and agent tool design if this README should go deeper.
 
 ## Running Locally
 
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
+jupyter notebook sales-forecasting.ipynb
 ```
-
-> Confirm the exact run command matches `app.py`'s framework (Streamlit assumed here based on the entry-point filename).
 
 ## Known Limitations
 
-- Retrieval strategy and agent architecture details are not fully documented here yet
+- Model choice, dataset, and quantitative results are not yet documented in this README
 
 ## Author
 
